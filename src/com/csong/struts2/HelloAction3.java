@@ -1,16 +1,16 @@
 package com.csong.struts2;
 
-import com.csong.struts2.model.User;
+import com.csong.struts2.dto.UserDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HelloAction3 extends ActionSupport {
-	private User user;
+	private UserDTO user;
 
-	public User getUser() {
+	public UserDTO getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(UserDTO user) {
 		this.user = user;
 	}
 
