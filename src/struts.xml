@@ -4,10 +4,11 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-<!-- 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="true" />
+    
 
+<!-- 
     <package name="default" namespace="/" extends="struts-default">
 
         <default-action-ref name="index" />
@@ -33,13 +34,18 @@
     <!-- Add packages here -->
     <constant name="struts.devMode" value="true" />
     <package name="default" namespace="/" extends="struts-default">
-
-        <action name="hello">
-            <result>
+    <!-- method="add" DMI dynamic method invocation use '/user!add' to specify url,
+    'struts.enable.DynamicMethodInvocation' should be set true
+        <action name="hello" class="com.csong.struts2.HelloAction3" method="add">
+            <result name="success">
+                /hello.jsp
+            </result>
+        </action>
+        -->
+        <action name="hello" class="com.csong.struts2.HelloAction3">
+            <result name="success">
                 /hello.jsp
             </result>
         </action>
     </package>
- 
- 
 </struts>
