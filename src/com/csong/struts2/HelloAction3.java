@@ -1,26 +1,18 @@
 package com.csong.struts2;
 
+import com.csong.struts2.model.User;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HelloAction3 extends ActionSupport {
-	private String name;
-	public String getName() {
-		return name;
+	private User user;
+
+	public User getUser() {
+		return user;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUser(User user) {
+		this.user = user;
 	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
-	private Integer age;
 
 	public String execute() {
 		System.out.println("hello action3");
@@ -28,8 +20,8 @@ public class HelloAction3 extends ActionSupport {
 	}
 
 	public String add() {
-		System.out.println("age: " +  age);
-		System.out.println("name: " +  name);
+		System.out.println("age: " +  user.getAge());
+		System.out.println("name: " +  user.getName());
 		return "success";
 	}
 }
